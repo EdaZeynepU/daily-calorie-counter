@@ -1,0 +1,34 @@
+:root{
+    --cal1:rgba(10, 59, 25, 0.815);
+    --cal2:rgba(255, 255, 255, 0.514);
+}
+
+body{
+    background: url(apple.jpg); 
+    background-size: cover;
+}
+
+.cal{
+    width: 500px;
+    height:250px;
+    padding: 45px;
+    background-color: var(--cal1);
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--cal2);
+}
+
+.cal> h1{
+    color: rgb(254, 254, 254);
+}
+
+.cal:hover{
+    box-shadow: 0 0 100px var(--cal2);
+    transition: 500ms;
+}

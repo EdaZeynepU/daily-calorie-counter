@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Diet</title>
 </head>
 <body>
     <div class="cal">
@@ -14,6 +14,38 @@
         <button type="submit" class="calori">eat</button>
     </div>
 
+    <div class="reset" onclick="reset()">
+        <label for="reset-icon" id="reset-label">
+            
+        <i id="reset-icon" class="fa-solid fa-arrows-rotate fa-2xl"></i>
+        Reset
+    </label>
+    </div>
+
+    <div class="target">
+        <label for="reset-target" id="target-label" class="targetx">
+            <i id="reset-target" class="fa-solid fa-bullseye fa-2xl targetx"></i>
+        New Target
+    </label>
+    </div>
+
+        <!-- <div class="newCalori">
+            <label for="newCal" id="new-label">
+                <input type="number" name="newCal" id="newCal">
+                <button type="submit" class="customCaloriT">That's it</button>
+        </label>
+        </div> -->
+
+        
+    <script src="https://kit.fontawesome.com/6e4ddc7ce8.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <script>
+    const current_h=document.querySelector(".current");
+        function reset() {
+            resetedTrgt=localStorage.getItem("target");
+            localStorage.setItem("targetCal",resetedTrgt);
+            current_h.innerHTML=resetedTrgt;
+        }
+    </script>
 </body>
 </html>
